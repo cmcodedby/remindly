@@ -1,7 +1,7 @@
 import './App.css'
 import {Routes, Route} from 'react-router-dom'
 
-import { Home } from './pages/home.jsx'
+import {Home } from './pages/Home.jsx'
 import { CreateRemindly } from './pages/CreateRemindly.jsx'
 import {About} from './pages/About.jsx'
 function App() {
