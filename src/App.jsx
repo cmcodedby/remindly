@@ -7,10 +7,9 @@ import {About} from './pages/About.jsx'
 function App() {
   return (
     <Routes>
-
-    <Route path= "/" element= {<Home/>} />
-    <Route path= "/create" element = {<CreateRemindly/>} />
-    <Route path= "/about" element = {<About/>} />
+      <Route path= "/" element= {<Home/>} />
+      <Route path= "/create" element = {<CreateRemindly/>} />
+      <Route path= "/about" element = {<About/>} />
     </Routes>
   )
 }
