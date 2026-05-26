@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --green-dark:    #2d6a4f;
+  --green-mid:     #40916c;
+  --green-pale:    #d8f3dc;
+  --cream:         #fdfef9;
+  --warm-white:    #ffffff;
+  --text-1:        #1b3a2d;
+  --text-3:        #a8c9b5;
+  --border:        #c8e6d4;
+  --border-focus:  #40916c;
+  --shadow:        rgba(45, 106, 79, 0.10);
+  --radius:        16px;
+  --font-head:     'Nunito', sans-serif;
+  --font-body:     'Lato', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════
+   CONTAINER — full page, left-aligned
+══════════════════════════════ */
+#create-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 0 48px 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ══════════════════════════════
+   HEADER
+══════════════════════════════ */
+#create-header {
+  width: 100%;
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+  color: var(--warm-white);
+  font-family: var(--font-head);
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  padding: 52px 32px 40px;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 6px 24px rgba(45, 106, 79, 0.18);
+}
+
+/* ══════════════════════════════
+   INPUTS — full width, left-aligned
+══════════════════════════════ */
+#reminder-input,
+#date-input {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-1);
+  background: var(--warm-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  width: calc(100% - 64px);
+  margin: 0 32px;
+  outline: none;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+#reminder-input {
+  min-height: 180px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+#reminder-input::placeholder,
+#date-input::placeholder {
+  color: var(--text-3);
+  font-style: italic;
+}
+
+#reminder-input:focus,
+#date-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 4px var(--green-pale), 0 2px 8px var(--shadow);
+}
+
+/* ══════════════════════════════
+   BUTTON
+══════════════════════════════ */
+#create-btn {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--warm-white);
+  background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+  border: none;
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  width: calc(100% - 64px);
+  margin: 0 32px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(45, 106, 79, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#create-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(45, 106, 79, 0.30);
+}
+
+#create-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 8px rgba(45, 106, 79, 0.18);
+}

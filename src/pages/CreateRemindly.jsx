@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import './CreateRemindly.css'
 
 export const CreateRemindly = () => {
 
@@ -43,11 +44,12 @@ export const CreateRemindly = () => {
 
     return (
         <>
-         
-            <input defaultValue={"Add your reminder here"} value = {reminderInput} onChange={handleReminderChange} ></input>
-            <input defaultValue={"Input reminder date"} value = {dateInput} onChange={handleDateChange} ></input>
-            <button onClick={create}>Create Remindly</button>
-            
+            <div id="create-container">
+                <div id="create-header">Create Remindly</div>
+                <textarea id="reminder-input" placeholder="Add your reminder here..." value={reminderInput} onChange={handleReminderChange}></textarea>
+                <input id="date-input" placeholder="Input reminder date" value={dateInput} onChange={handleDateChange}></input>
+                <button id="create-btn" onClick={create}>Create</button>
+            </div>
         </>
     )
 }
