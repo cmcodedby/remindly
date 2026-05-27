@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import './home.css';
+import './Home.css';
 
 export const Home = () => {
     const WEB_URL = "https://my-node-app-xirq.onrender.com/get-reminders"
