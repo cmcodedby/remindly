@@ -8,10 +8,10 @@ import { Login } from './pages/Login.jsx'
 function App() {
   return (
     <Routes>
-      <Route path= "/home" element = {<Home/>} />
+      <Route path= "/" element = {<Home/>} />
       <Route path= "/create" element = {<CreateRemindly/>} />
       <Route path= "/about" element = {<About/>} />
-      <Route path= "/" element = {<Login/>} />
+      {/* <Route path= "/" element = {<Login/>} /> */}
     </Routes>
   )
 }

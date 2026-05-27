@@ -16,8 +16,8 @@ const handleUsernameChange = (event) => {
 
     return (
         <>
-             <input defaultValue={"Username"} value = {usernameInput} onChange={handleUsernameChange} ></input>
-             <input defaultValue={"Password"} value = {passwordInput} onChange={handlePasswordChange} ></input>
+             <input placeholder="Username" value = {username} onChange={handleUsernameChange} ></input>
+             <input placeholder="Password" value = {password} onChange={handlePasswordChange} ></input>
 
 
 
