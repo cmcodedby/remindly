@@ -1,10 +1,10 @@
-import "./CreateRemindly.css";
 import { Link } from "react-router-dom";
+import "./CreateRemindly.css";
 
-export const About = () => {
+export const Track = () => {
     return (
         <div id="create-container">
-            <div id="create-header">About Remindly</div>
+            <div id="create-header">Track Wellness</div>
 
             <nav id="navbar">
                 <Link to="/">Home</Link>

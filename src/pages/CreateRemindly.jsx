@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import './CreateRemindly.css'
+import { Link } from "react-router-dom";
 
 export const CreateRemindly = () => {
 
@@ -43,13 +44,37 @@ export const CreateRemindly = () => {
     };
 
     return (
-        <>
-            <div id="create-container">
-                <div id="create-header">Create Remindly</div>
-                <textarea id="reminder-input" placeholder="Add your reminder here..." value={reminderInput} onChange={handleReminderChange}></textarea>
-                <input id="date-input" placeholder="Input reminder date" value={dateInput} onChange={handleDateChange}></input>
-                <button id="create-btn" onClick={create}>Create</button>
+    <>
+        <div id="create-container">
+            <div id="create-header">Create Remindly</div>
+
+            <nav id="navbar">
+                <Link to="/">Home</Link>
+                <Link to="/create">Create</Link>
+                <Link to="/track">Track</Link>
+                <Link to="/about">About</Link>
+            </nav>
+
+            <div id="create-form-card">
+                <textarea
+                    id="reminder-input"
+                    placeholder="Add your reminder here..."
+                    value={reminderInput}
+                    onChange={handleReminderChange}
+                ></textarea>
+
+                <input
+                    id="date-input"
+                    placeholder="Input reminder date"
+                    value={dateInput}
+                    onChange={handleDateChange}
+                />
+
+                <button id="create-btn" onClick={create}>
+                    Create
+                </button>
             </div>
-        </>
-    )
+        </div>
+    </>
+);
 }
